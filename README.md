@@ -29,10 +29,10 @@
 
 
 
-## group テーブル
+## groups テーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users_groups
@@ -46,8 +46,8 @@
 ## users_groups テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
