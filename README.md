@@ -7,7 +7,8 @@
 |password|string|null: false|
 
 ### Association
-- has_many :groups
+- has_many :users_groups
+- has_many  :groups,  through:  :users_groups
 - has_many :chats
 
 
@@ -23,7 +24,7 @@
 
 ### Association
 - belongs_to :user
-
+- belongs_to :groups
 
 
 
@@ -35,7 +36,8 @@
 |groupname|integer|null: false|
 
 ### Association
-- has_many :users
+- has_many :users_groups
+- has_many :users,  through:  :users_groups
 - has_many :chats
 
 
