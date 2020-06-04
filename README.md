@@ -19,12 +19,12 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group id|integer|null: false, foreign_key: true|
-|chat|text|null: false|
+|chat|text||
 |image|text| |
 
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 
 
@@ -32,8 +32,7 @@
 ## group テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|groupname|integer|null: false|
+|name|integer|null: false|
 
 ### Association
 - has_many :users_groups
